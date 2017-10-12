@@ -1,20 +1,61 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Jumbotron, Button } from 'reactstrap';
+import { strava } from '../../config/';
 
-const AthleteContainer = (props) => {
-    return (
-      <div>
-        <Jumbotron>
-          <h1 className="display-3">Hello Athlete!</h1>
-          <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
-          <hr className="my-2" />
-          <p>It uses utility classes for typgraphy and spacing to space content out within the larger container.</p>
-          <p className="lead">
-            <Button color="primary">Learn More</Button>
-          </p>
-        </Jumbotron>
-      </div>
-    );
-  };
-  
-  export default AthleteContainer;
+const api = require('../../helpers/api');
+
+class AthleteContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+      profile: '',
+      firstname: '',
+      lastname: '',
+      state: '',
+      country: ''
+    };
+  }
+
+  getAthleteData(url) {
+    console.log(api, url);
+    // fetchStrava(url).then(response => this.setAtheteData(response));
+    // api
+    //   .fetchFromStrava(url)
+    //   .then(response => this.setAtheteData(response));
+  }
+
+  setAtheteData(result) {
+    console.log(result)
+    this.setState({
+      loading: false,
+      profile: result.profile,
+      firstname: result.firstname,
+      lastname: result.lastname,
+      state: result.state,
+      country: result.country
+    })
+  }
+
+  componentDidMount() {
+    let url = `${strava.path.base}${strava.userId}?${strava.path.token}${strava.token}`;
+    this.getAthleteData(url);
+  }
+
+  render(){
+    const {
+      loading,
+      profile,
+      firstname,
+      lastname,
+      state,
+      country
+    } = this.state;
+
+    return loading 
+    ? <p> loading </p>
+    : <p> jest ok </p>
+  }
+}
+
+export default AthleteContainer;

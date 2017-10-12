@@ -17,6 +17,6 @@ export const strava = {
         activities: '/activities',
         token: 'access_token='
     },
-    token: '',
-    userId: ''
+    token: '302cbcbcb92eb36f2b452192a094fc1dc25a470f ',
+    userId: '1652428'
 }
