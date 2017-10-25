@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Button } from 'reactstrap';
 import { strava } from '../../config/';
+import Loader from '../LoaderContainer';
 
 import Athlete from '../Athlete/';
 
@@ -41,7 +42,7 @@ class AthleteContainer extends Component {
     } = this.state;
 
     return loading
-      ? <p> loading </p>
+      ? <Loader />
       : <Athlete result={result} />
   }
 }
