@@ -9,6 +9,7 @@ import Header from './components/Header/'
 import AthleteContainer from './components/AthleteContainer/'
 import StatsContainer from './components/StatsContainer/'
 import ActivitiesContainer from './components/ActivitiesContainer/'
+import ActivityContainer from './components/ActivityContainer/ActivityContainer'
 import ErrorContainer from './components/ErrorContainer/'
 
 class App extends Component {
@@ -17,9 +18,10 @@ class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path="/" component={AthleteContainer} />
+          <Route exact path="/profile" component={AthleteContainer} />
           <Route exact path="/stats" component={StatsContainer} />
-          <Route exact path="/latest" component={ActivitiesContainer} />
+          <Route exact path="/activities" component={ActivitiesContainer} />
+          <Route exact path="/activity/:id" component={ActivityContainer} />
           <Route component={ErrorContainer}/>
         </Switch>
       </div>
