@@ -44,7 +44,10 @@ import { Table, Container, Col, Row } from "reactstrap";
 //   }
 // }
 
+
+
 const ActivityContainer = ({ item }) => (
+  
   <Container style={{ marginTop: 100 }}>
     <Col>
       <p>{item}</p>
