@@ -6,7 +6,7 @@ import moment from "moment";
 
 import ActivitiesListItem from "./ActivitiesListItem";
 
-const ActivitiesListContainer = ({ result }) => (
+const ActivitiesListContainer = ({ result, props }) => (
   <Container style={{ marginTop: 100 }}>
     <Col>
       <Table>{result.map(item => <ActivitiesListItem item={item} />)}</Table>

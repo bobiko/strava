@@ -21,7 +21,7 @@ class App extends Component {
           <Route exact path="/profile" component={AthleteContainer} />
           <Route exact path="/stats" component={StatsContainer} />
           <Route exact path="/activities" component={ActivitiesContainer} />
-          <Route exact path="/activity/:id" render={({ ...props }) => <ActivityContainer pass_to_page_content='hi' {...props} /> } /> 
+          <Route exact path="/activity/:id" render={({ ...props }) => <ActivityContainer fake='hi' {...props} /> } /> 
           <Route component={ErrorContainer}/>
         </Switch>
       </div>
