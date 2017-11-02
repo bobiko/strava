@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from "../LoaderContainer";
+import Loader from "../LoaderContainer/LoaderContainer";
 import { Table, Container, Col, Row } from "reactstrap";
 
 import ActivitySingleItem from './ActivitySingleItem'
@@ -10,8 +10,6 @@ import ActivitySingleItem from './ActivitySingleItem'
 class ActivityContainer extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log(props);
     this.state = {
       item: props.location.state.item,
       loading: true

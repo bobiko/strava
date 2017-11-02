@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from "../LoaderContainer";
+import Loader from "../LoaderContainer/LoaderContainer";
 import { Jumbotron, Button } from "reactstrap";
 
 import { strava } from "../../config";

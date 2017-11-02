@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Loader from "../LoaderContainer";
+import Loader from "../LoaderContainer/LoaderContainer";
 import { Table, Container, Col, Row } from "reactstrap";
 import Moment from "react-moment";
 import moment from "moment";
