@@ -30,7 +30,7 @@ class ActivitiesContainer extends React.Component {
   }
 
   componentDidMount() {
-    let url = `${strava.path.base}${strava.userId}${strava.path
+    let url = `${strava.path.base}${strava.path.athlete}/${strava.userId}${strava.path
       .activities}?${strava.path.token}${strava.token}`;
     this.getData(url);
   }

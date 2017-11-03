@@ -32,8 +32,9 @@ class ActivityContainer extends React.Component {
   }
   // todo: sprawdzic activity
   componentDidMount() {
-     let url = `${strava.path.base}${strava.activities}/${this.state.item.id}?${strava.path.token}${strava.token}`;
-     this.getAthleteData(url);
+    let url = `${strava.path.base}${strava.path
+      .activities}/${this.props.location.state.item.id}?${strava.path.token}${strava.token}`;
+    this.getAthleteData(url);
 
     this.setState({
       loading: false
