@@ -8,7 +8,13 @@ const convertTime = time =>
     .seconds(time)
     .format("H:mm:ss");
 
+const convertSpeed = speed => (speed * 3.6).toFixed(2);
+
+const covertDatetime = datetime => moment(datetime).format('YYYY-MM-DD');
+
 export default {
   convertTime,
-  convertDistance
+  convertDistance,
+  convertSpeed,
+  covertDatetime
 };
